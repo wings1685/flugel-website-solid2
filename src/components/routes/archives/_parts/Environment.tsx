@@ -9,7 +9,7 @@ export default function Environment() {
 			<Box>
 				<PageTitle icon="desktop">開発方針</PageTitle>
 				<Paragraph>
-					フロントエンドのフレームワークは、SolidStart / SvelteKit / Qwik / Next / Nuxt / Astro のいずれにおいても、サーバ環境上 SSG で構築をしております（ルーティングファイルは極限まで薄く、関連するファイルは近接させる、という思想を最も具現化できる SolidStart が今は最も好みです）。<br />
+					フロントエンドのフレームワークは、Solid / SvelteKit / Qwik / Next / Nuxt / Astro のいずれにおいても、サーバ環境上 SSG で構築をしております（ルーティングファイルは極限まで薄く、関連するファイルは近接させる、という思想を最も具現化できる Solid が今は最も好みです）。<br />
 					Validator は、Valibot / Zod を使用していますが、軽量という観点から Valibot を好んで使用しています。<br />
 					<br />
 					エラーや動作に不明な点が出た場合は、再現性の確認 → 推論 → 仮説 → 検証という機序の解析に重きを置いた手順で解消しています。<br />
@@ -32,7 +32,7 @@ export default function Environment() {
 			<Box>
 				<Paragraph>
 					主に以下の言語・ツールを使用しております。<br />
-					（本ウェブサイトは SolidStart + TypeScript + Sass + Vite）
+					（本ウェブサイトは Solid 2 Start Mode + TypeScript + Sass + Vite）
 				</Paragraph>
 				<HorizontalList class="monospace">
 					<For each={ stacks } keyed={ false }>

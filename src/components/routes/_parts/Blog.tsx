@@ -40,7 +40,7 @@ export default function Blog() {
 								<Glass as="a" href={ entry().link } icon="tab" isDark target="_blank" rel="noopener noreferrer">
 									<p>{ entry().title }</p>
 								</Glass>
-								<span class="published">{ formatDate(entry().published )}</span>
+								<span class="published">{ formatDate(entry().published) }</span>
 								<Paragraph class="summary">{ entry().summary }</Paragraph>
 							</article>
 						</li>
