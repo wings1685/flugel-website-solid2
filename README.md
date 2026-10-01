@@ -1,6 +1,7 @@
 # flugel.biz Solid 2
 
 SolidStart で構築した自分自身の屋号サイトを Solid 2 へ移行したリポジトリです。
+
 （SolidStart でのリポジトリは下記にリンクがあります）
 
 **Note:** 本リポジトリは、自分自身の屋号サイトであるため Issues 及び Pull Requests は受け付けておりません。
@@ -21,6 +22,7 @@ SolidStart で構築した自分自身の屋号サイトを Solid 2 へ移行し
 - SSR 安全なグローバルストア機構（piquo）
 - ルーティングファイルは極限まで薄く、本体は components/ に配置
 - Meta を起点から現在ページまで生成
+- Shiki の色付けコードをビルド時に埋め込み
 
 ## Related Articles
 
