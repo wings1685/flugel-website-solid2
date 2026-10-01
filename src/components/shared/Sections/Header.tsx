@@ -15,7 +15,8 @@ export default function Header() {
 			setNavOpened(false);
 		}
 	};
-	const page = createMemo(() => useLocation().pathname.replace(/\//g, '') || 'top');
+	const loc = useLocation();
+	const page = createMemo(() => loc.pathname.replace(/\//g, '') || 'top');
 
 	return (
 		<header>

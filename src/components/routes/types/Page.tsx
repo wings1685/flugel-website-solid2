@@ -1,4 +1,5 @@
 import { createMemo } from "solid-js";
+import { query } from "@solidjs/router";
 import { getHighlightedCode } from "./_models/usePage";
 import { codes as codesDeepGuard } from "./_models/codeDeepGuard";
 import { codes as codesProps } from "./_models/codeProps";
@@ -10,7 +11,7 @@ import { PageTitle, Paragraph } from "@/components/shared/Typography";
 import SiteMeta from "../SiteMeta";
 import type { RouteDefinition } from "@solidjs/router";
 
-const getShiki = async () => {
+const getShiki = query(async () => {
 	"use server";
 
 	const typesDeepGuard = await getHighlightedCode(codesDeepGuard.types);
@@ -28,7 +29,7 @@ const getShiki = async () => {
 		props: { icon: iconProps, pageTitle: pageTitleProps, types: typesProps, group: groupProps },
 		exclude: { glass: glassExclude },
 	};
-};
+}, 'get-shiki');
 
 export const route = {
 	preload: () => void getShiki(),
