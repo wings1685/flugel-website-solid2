@@ -30,6 +30,7 @@ SolidStart で構築した自分自身の屋号サイトを Solid 2 へ移行し
 - [Astro 上の Solid / Svelte / Vue にグローバルストアを持たせたい](https://wings.hatenablog.com/entry/AstroGlobalStores)
 - [JS フレームワークにおいてフォルダ構成の思想](https://wings.hatenablog.com/entry/FolderIdea)
 - [Meta 生成機構祭](https://wings.hatenablog.com/entry/metaFestival)
+- [SolidStart を Solid 2 へ移行探訪記](https://wings.hatenablog.com/entry/journeyToSolid2)
 
 ## Replaced Festival Repositories
 
