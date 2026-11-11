@@ -13,7 +13,7 @@ export default function Footer() {
 		<footer>
 			<Group>
 				<Glass mini>
-					<p class="copyright">{ flugel } &copy; { year() }</p>
+					<p class="copyright monospace">{ flugel } &copy; { year() }</p>
 				</Glass>
 			</Group>
 		</footer>
