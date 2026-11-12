@@ -19,7 +19,7 @@ describe('Nav コンポーネントと Bg コンポーネントの月変更連�
 				</>
 			);
 		};
-		const { getAllByTestId, getByTestId, container } = render(() => <TestWrapper />);
+		const { getAllByTestId, getByTestId } = render(() => <TestWrapper />);
 
 		// 1. Nav コンポーネントのリンクが 12 か月分生成されているか確認
 		const links = getAllByTestId('btnNav');
