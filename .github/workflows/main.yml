@@ -24,12 +24,15 @@ jobs:
           node-version: '26' # プロジェクトに合わせて変更可（LTS版など）
           cache: 'npm'
 
-      # 2. パッケージのインストールとビルド実行（ここで dist/ が作られる）
-      - name: Install and Build
-        run: |
-          npm ci
-          npx vitest run
-          npm run build
+      # 2. パッケージのインストール・テスト・ビルド実行（ここで dist/ が作られる）
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npx vitest run
+
+      - name: Build
+        run: npm run build
 
       # 3. SSH鍵の準備
       - name: Setup SSH
