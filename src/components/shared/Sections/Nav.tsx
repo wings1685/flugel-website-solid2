@@ -20,7 +20,7 @@ export default function Nav() {
 		<nav class="wrapper">
 			<For each={ Object.entries(monthData) }>
 				{([key, name]) => (
-					<Glass as="div" mini isDark class="btn_glass" onClick={ (e: Event) => handleClick(e, key) }>{ name }</Glass>
+					<Glass as="div" mini isDark class="btn_glass" onClick={ (e: Event) => handleClick(e, key) } data-testid="btnNav">{ name }</Glass>
 				)}
 			</For>
 		</nav>

@@ -28,6 +28,7 @@ jobs:
       - name: Install and Build
         run: |
           npm ci
+          npx vitest run
           npm run build
 
       # 3. SSH鍵の準備
