@@ -1,11 +1,15 @@
-import { describe, it, expect } from "vitest";
-import { render, fireEvent, waitFor } from "@solidjs/testing-library";
+import { describe, it, expect, afterEach } from "vitest";
+import { render, fireEvent, waitFor, cleanup } from "@solidjs/testing-library";
 import { useStore } from "@/_global/piquo";
 import { Nav } from "@/components/shared/Sections";
 import { Bg } from "@/components/shared/Utils";
 import { monthData } from "@/_global/lib/shared";
 
 describe('Nav コンポーネントと Bg コンポーネントの月変更連動テスト', () => {
+	afterEach(() => {
+		cleanup();
+	});
+
 	it('リンクを押したら月表示が変わるか', async () => {
 		const TestWrapper = () => {
 			return (

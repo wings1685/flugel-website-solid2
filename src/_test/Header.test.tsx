@@ -1,5 +1,5 @@
-import { describe, it, expect, vi } from "vitest";
-import { render, fireEvent, waitFor } from "@solidjs/testing-library";
+import { describe, it, expect, vi, afterEach } from "vitest";
+import { render, fireEvent, waitFor, cleanup } from "@solidjs/testing-library";
 import { createRouter, memoryHistory } from "@solidjs/router";
 import { Header } from "@/components/shared/Sections";
 import type { Params, RouteSectionProps } from "@solidjs/router";
@@ -7,6 +7,10 @@ import type { Params, RouteSectionProps } from "@solidjs/router";
 window.scrollTo = vi.fn();
 
 describe('Header コンポーネントのナビゲーションテスト', () => {
+	afterEach(() => {
+		cleanup();
+	});
+
 	it('Typesリンクをクリックしたとき、正常にパスが切り替わり active クラスが付与されるか', async () => {
 		// 1. テスト用の仮想ルーター（createMemoryHistory）の初期状態をセットアップ
 		const history = memoryHistory('/');
