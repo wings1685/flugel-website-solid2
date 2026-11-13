@@ -26,19 +26,22 @@ describe('Nav コンポーネントと Bg コンポーネントの月変更連�
 		expect(links.length).toBe(12);
 
 		// 2. Nav コンポーネントの現在月の次の月を押して Store が切り替わるか確認
-		const month = new Date().getMonth() + 1;
+		const month = new Date().getMonth();
+		const nextMonth = month === 12 ? 1 : month + 1;
 		const monthString = Object.keys(monthData)[month];
-		fireEvent.click(links[month]);
+		const nextMonthString = Object.keys(monthData)[nextMonth];
+
+		fireEvent.click(links[nextMonth]);
 		await waitFor(() => {
 			const { selectedMonth } = useStore('selectedMonth');
 
-			expect(selectedMonth()).toBe(monthString);
+			expect(selectedMonth()).toBe(nextMonthString);
 		}, { timeout: 100 });
 
 		// 3. Bg コンポーネントで srcset に切り替わった月の画像が入ったか確認
 		await waitFor(() => {
 			const bg = getByTestId('bg');
-			const regexp = new RegExp(`${monthString}.webp`);
+			const regexp = new RegExp(`${nextMonthString}.webp`);
 			expect(bg.getAttribute('src')).toMatch(regexp);
 		}, { timeout: 100 });
 	});
