@@ -28,7 +28,6 @@ describe('Nav コンポーネントと Bg コンポーネントの月変更連�
 		// 2. Nav コンポーネントの現在月の次の月を押して Store が切り替わるか確認
 		const month = new Date().getMonth();
 		const nextMonth = month === 12 ? 1 : month + 1;
-		const monthString = Object.keys(monthData)[month];
 		const nextMonthString = Object.keys(monthData)[nextMonth];
 
 		fireEvent.click(links[nextMonth]);
